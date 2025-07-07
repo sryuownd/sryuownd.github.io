@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NHWNMXBT28"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NHWNMXBT28');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Услуги | Escape</title>
-    <!-- Favicon -->
     <link rel="icon" href="images/logo2.jpeg" type="image/jpeg">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Наш CSS -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка сайта -->
     <header class="container py-3">
         <div class="row align-items-center">
             <div class="col-md-4 logo-container">
@@ -29,12 +35,14 @@
         </div>
     </header>
 
-    <!-- Основное содержимое -->
     <main class="container mt-5">
         <h1 class="service-title-custom mb-4"># Услуги и цены</h1>
         
-        <!-- Полный список услуг -->
-        <div class="list-group">
+        <div class="mb-4">
+            <input type="text" id="searchInput" class="form-control" placeholder="Поиск услуг...">
+        </div>
+
+        <div class="list-group" id="servicesList">
             <div class="list-group-item border-0 border-bottom d-flex justify-content-between align-items-center py-3">
                 <span class="fw-bold">1. Консультация</span>
                 <span class="badge bg-dark rounded-pill">от 2500₽</span>
@@ -44,20 +52,36 @@
                 <span class="badge bg-dark rounded-pill">от 5000₽</span>
             </div>
             <div class="list-group-item border-0 border-bottom d-flex justify-content-between align-items-center py-3">
-                <span class="fw-bold">3. Правовая экспертиза документов (договор, соглашение и др.)</span>
+                <span class="fw-bold">3. Правовая экспертиза документов</span>
                 <span class="badge bg-dark rounded-pill">от 7000₽</span>
             </div>
             <div class="list-group-item border-0 border-bottom d-flex justify-content-between align-items-center py-3">
-                <span class="fw-bold">4. Составление проектов договоров, уставов, контрактов и пр.</span>
+                <span class="fw-bold">4. Составление проектов договоров</span>
                 <span class="badge bg-dark rounded-pill">от 7000₽</span>
             </div>
             <div class="list-group-item border-0 d-flex justify-content-between align-items-center py-3">
-                <span class="fw-bold">5. Выработка правовой позиции по делу для последующего ведения дела в суде</span>
+                <span class="fw-bold">5. Ведение дела в суде</span>
                 <span class="badge bg-dark rounded-pill">от 12000₽</span>
             </div>
         </div>
     </main>
 
+    <div class="modal fade" id="resultModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Результат</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

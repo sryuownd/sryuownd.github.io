@@ -1,24 +1,17 @@
-/* Основные кастомизации Bootstrap */
 .nav-custom {
-    background-color: var(--bs-dark); /* Черный фон навигации */
-    height: 54px; /* Фиксированная высота */
+    background-color: var(--bs-dark);
+    height: 54px;
 }
-
-/* Стили для логотипа */
 .logo-container img {
     max-width: 100%;
     height: auto;
 }
-
-/* Стиль для заголовков услуг/контактов */
 .service-title-custom {
     display: inline-block;
-    background-color: var(--bs-dark); /* Черный фон */
-    color: var(--bs-white); /* Белый текст */
+    background-color: var(--bs-dark);
+    color: var(--bs-white);
     padding: 0.5rem 1rem;
 }
-
-/* Десктопная версия логотипа */
 @media (min-width: 992px) {
     .logo-container img {
         width: 446px;
